@@ -1,0 +1,37 @@
+Performance test #1 for a 2GB txt file(1st process) : 
+┌──(vlad_kali㉿kali-vlad)-[~/Downloads/TASK4WND]
+└─$ python3 my-reader.py /home/vlad_kali/Downloads/TASK4WND/textmare2.txt vlad linux sah carte xxx yyy zzz                   
+vlad : 145 occurrences!
+linux : 3 occurrences!
+sah : 9001 occurrences!
+carte : 1 occurrences!
+xxx : 8905 occurrences!
+yyy : 9048 occurrences!
+zzz : 8798 occurrences!
+
+real    28.208s
+
+Performance test #2 for the same 2GB txt file(2nd process):
+┌──(vlad_kali㉿kali-vlad)-[~/Downloads/TASK4WND]
+└─$ python3 my-reader.py /home/vlad_kali/Downloads/TASK4WND/textmare2.txt vlad linux sah carte xxx yyy zzz                   
+File /home/vlad_kali/Downloads/TASK4WND/textmare2.txt already processed. Retrieved results from storage.
+vlad : 145 occurrences!
+linux : 3 occurrences!
+sah : 9001 occurrences!
+carte : 1 occurrences!
+xxx : 8905 occurrences!
+yyy : 9048 occurrences!
+zzz : 8798 occurrences!
+
+real    9.486s
+
+Performance test #3 for another 2GB txt file(already processed) : 
+┌──(vlad_kali㉿kali-vlad)-[~/Downloads/TASK4WND]
+└─$ python3 my-reader.py /home/vlad_kali/Downloads/TASK4WND/textmare.txt abc xyz mno
+File /home/vlad_kali/Downloads/TASK4WND/textmare.txt already processed. Retrieved results from storage.
+abc : 7965 occurrences!
+xyz : 7714 occurrences!
+mno : 7814 occurrences!
+
+real    9.687s
+
